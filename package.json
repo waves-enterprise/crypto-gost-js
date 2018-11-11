@@ -4,12 +4,9 @@
   "description": "Pure Javascript implementation of WebCrypto API interfaces and Public Key Infrastructure for GOST algorithms (Russian Cryptographic Standards)",
   "main": "dist/CryptoGost.min.js",
   "scripts": {
-    "test": "./node_modules/.bin/webpack-dev-server --config config/webpack.test.js --mode development --hot --progress --host 0.0.0.0 --port 8080",
-    "test-node": "node ./dist/TestNode.js",
-    "build": "./node_modules/.bin/webpack --config config/webpack.prod.js --colors --progress --display-error-details --mode=production",
-    "build-node": "npm run build -- --target node",
-    "build-web": "npm run build -- --target web",
-    "test-build-node": "npm run build-node && npm run test-node",
+    "test": "./node_modules/.bin/webpack-dev-server --config config/webpack.test.js --mode development --hot --host 0.0.0.0 --port 8080",
+    "test-node": "npm run build && node dist/CryptoGost-test",
+    "build": "./node_modules/.bin/webpack --config config/webpack.prod.js --colors --display-error-details --mode=production",
     "serve": "./node_modules/.bin/webpack-dev-server --mode development --hot --progress --host 0.0.0.0 --port 8080"
   },
   "repository": {
