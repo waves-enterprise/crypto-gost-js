@@ -1,0 +1,104 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   '-f',
+1 verbose cli   'unpublish',
+1 verbose cli   'crypto-gost-js' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 warn using --force I sure hope you know what you are doing.
+5 silly unpublish args[0] crypto-gost-js
+6 silly unpublish thing Result {
+6 silly unpublish   raw: 'crypto-gost-js',
+6 silly unpublish   scope: null,
+6 silly unpublish   name: 'crypto-gost-js',
+6 silly unpublish   rawSpec: '',
+6 silly unpublish   spec: 'latest',
+6 silly unpublish   type: 'tag' }
+7 verbose getPublishConfig null
+8 silly ls normalized crypto-gost-js
+9 silly gentlyRm /home/artem/.npm/crypto-gost-js is being purged
+10 verbose gentlyRm don't care about contents; nuking /home/artem/.npm/crypto-gost-js
+11 silly mapToRegistry name crypto-gost-js
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/crypto-gost-js
+15 verbose get GET as part of write; not caching result
+16 verbose request uri https://registry.npmjs.org/crypto-gost-js?write=true
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 4:09:06 PM
+19 verbose request using bearer token for auth
+20 verbose request id 1e57dcd45c22733a
+21 http request GET https://registry.npmjs.org/crypto-gost-js?write=true
+22 http 200 https://registry.npmjs.org/crypto-gost-js?write=true
+23 verbose headers { date: 'Tue, 13 Nov 2018 13:09:07 GMT',
+23 verbose headers   'content-type': 'application/json',
+23 verbose headers   'transfer-encoding': 'chunked',
+23 verbose headers   connection: 'keep-alive',
+23 verbose headers   'set-cookie':
+23 verbose headers    [ '__cfduid=df831a9bee20e20208b38676bdf64e5331542114546; expires=Wed, 13-Nov-19 13:09:06 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+23 verbose headers   'content-encoding': 'gzip',
+23 verbose headers   'cache-control': 'max-age=300',
+23 verbose headers   'cf-ray': '4791788d3e398b52-KBP',
+23 verbose headers   etag: '"5beacc71-feb"',
+23 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+23 verbose headers   vary: 'accept-encoding, accept',
+23 verbose headers   server: 'cloudflare' }
+24 silly get cb [ 200,
+24 silly get   { date: 'Tue, 13 Nov 2018 13:09:07 GMT',
+24 silly get     'content-type': 'application/json',
+24 silly get     'transfer-encoding': 'chunked',
+24 silly get     connection: 'keep-alive',
+24 silly get     'set-cookie':
+24 silly get      [ '__cfduid=df831a9bee20e20208b38676bdf64e5331542114546; expires=Wed, 13-Nov-19 13:09:06 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+24 silly get     'content-encoding': 'gzip',
+24 silly get     'cache-control': 'max-age=300',
+24 silly get     'cf-ray': '4791788d3e398b52-KBP',
+24 silly get     etag: '"5beacc71-feb"',
+24 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+24 silly get     vary: 'accept-encoding, accept',
+24 silly get     server: 'cloudflare' } ]
+25 verbose get saving crypto-gost-js to /home/artem/.npm/registry.npmjs.org/crypto-gost-js_3Fwrite_3Dtrue/.cache.json
+26 info unpublish No version specified, removing all
+27 verbose request uri https://registry.npmjs.org/crypto-gost-js/-rev/1-e65c6f1c9ac38f527e93175e648c2679
+28 verbose request sending authorization for write operation
+29 info attempt registry request try #1 at 4:09:07 PM
+30 verbose request using bearer token for auth
+31 http request DELETE https://registry.npmjs.org/crypto-gost-js/-rev/1-e65c6f1c9ac38f527e93175e648c2679
+32 http 400 https://registry.npmjs.org/crypto-gost-js/-rev/1-e65c6f1c9ac38f527e93175e648c2679
+33 verbose headers { date: 'Tue, 13 Nov 2018 13:09:08 GMT',
+33 verbose headers   'content-type': 'application/json',
+33 verbose headers   'content-length': '171',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'set-cookie':
+33 verbose headers    [ '__cfduid=dd387b099894fc997c7e0145680d83a971542114547; expires=Wed, 13-Nov-19 13:09:07 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+33 verbose headers   'cf-ray': '4791789248a58b52-KBP',
+33 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+33 verbose headers   vary: 'Accept-Encoding',
+33 verbose headers   server: 'cloudflare' }
+34 verbose request invalidating /home/artem/.npm/registry.npmjs.org/crypto-gost-js on DELETE
+35 verbose stack Error: You can no longer unpublish this version. Please deprecate it instead
+35 verbose stack npm deprecate -f 'crypto-gost-js@*' "this package has been deprecated" : crypto-gost-js
+35 verbose stack     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/usr/share/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:126:13)
+35 verbose stack     at Request.emit (events.js:214:7)
+35 verbose stack     at Request.<anonymous> (/usr/share/npm/node_modules/request/request.js:1082:10)
+35 verbose stack     at emitOne (events.js:121:20)
+35 verbose stack     at Request.emit (events.js:211:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/usr/share/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 400
+37 verbose pkgid crypto-gost-js
+38 verbose cwd /home/artem/Desktop/crypto
+39 error Linux 4.15.0-29-generic
+40 error argv "/usr/bin/node" "/usr/bin/npm" "-f" "unpublish" "crypto-gost-js"
+41 error node v8.10.0
+42 error npm  v3.5.2
+43 error code E400
+44 error You can no longer unpublish this version. Please deprecate it instead
+44 error npm deprecate -f 'crypto-gost-js@*' "this package has been deprecated" : crypto-gost-js
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
