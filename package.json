@@ -7,7 +7,8 @@
     "test": "./node_modules/.bin/webpack-dev-server --config config/webpack.test.js --mode development --hot --open --port 8080",
     "test-node": "npm run build && node dist/CryptoGost-test",
     "build": "./node_modules/.bin/webpack --config config/webpack.prod.js --colors --display-error-details --mode=production",
-    "serve": "./node_modules/.bin/webpack-dev-server --mode development --hot --progress --host 0.0.0.0 --port 8080"
+    "serve": "./node_modules/.bin/webpack-dev-server --mode development --hot --progress --host 0.0.0.0 --port 8080",
+    "prepublish": "npm run build && npm run test-node"
   },
   "repository": {
     "type": "git",
